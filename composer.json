@@ -1,0 +1,24 @@
+{
+    "name": "SkyLightSK/union",
+    "description": "Very microframework for plugin development.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SkyLightSK",
+            "email": "kopel@aport.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Union\\": "src/Union/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Union\\Tests\\": "tests/"
+        }
+    }
+}
