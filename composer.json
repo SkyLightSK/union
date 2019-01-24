@@ -1,5 +1,5 @@
 {
-    "name": "SkyLightSK/union",
+    "name": "skylight/union",
     "description": "Very microframework for plugin development.",
     "type": "library",
     "license": "MIT",
