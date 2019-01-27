@@ -6,7 +6,9 @@
  * Time: 3:09
  */
 
-namespace Union\Ajax;
+namespace Union;
+
+use Union\Ajax\AjaxSubjectable;
 
 class Controller implements \SplSubject
 {
