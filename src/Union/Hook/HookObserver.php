@@ -6,11 +6,11 @@
  * Time: 3:05
  */
 
-namespace Union\Ajax;
+namespace Union\Hook;
 
 use Union\Observer\UnionObserver;
 
-class AjaxObserver extends UnionObserver
+class HookObserver extends UnionObserver
 {
     /**
      * @var array

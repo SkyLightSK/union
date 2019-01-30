@@ -8,10 +8,17 @@
 
 namespace Union;
 
-use Union\Ajax\AJaxSubjectable;
+use Union\Contracts\Hookable;
+use Union\Hook\HasHooks;
 
-abstract class Model extends \WeDevs\ORM\Eloquent\Model implements \SplSubject
+abstract class Model extends \WeDevs\ORM\Eloquent\Model implements Hookable
 {
-  use AJaxSubjectable;
+  use HasHooks;
+
+  public function __construct(array $attributes = array())
+  {
+      parent::__construct($attributes);
+      self::$_instances[] = $this;
+  }
 
 }

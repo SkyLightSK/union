@@ -8,9 +8,23 @@
 
 namespace Union;
 
-use Union\Ajax\AjaxSubjectable;
+use Union\Contracts\Hookable;
+use Union\Hook\HasHooks;
 
-class Controller implements \SplSubject
+abstract class Controller implements Hookable
 {
-    use AjaxSubjectable;
+    use HasHooks;
+
+//    public $actions;
+    public $filters;
+
+
+    public function __construct()
+    {
+        self::$_instances[] = $this;
+
+        $this->setActions();
+        $this->addActions();
+    }
+
 }
